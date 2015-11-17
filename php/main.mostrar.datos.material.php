@@ -25,14 +25,24 @@
        <input type="hidden" name="disponibilidad" value="<?php echo $mostrar['disponible']; ?>">
        <input type="hidden" name="material" value="<?php echo $mostrar['id_material']; ?>">
        <!-- Se comprueba el valor de disponible y se asigna un texto al botón -->
+       <?php
+       if ($_SESSION['sId']>0) {
+               echo '<input type="submit" class="userForm userModificar" alt="Modificar" title="Modificar" name="modificar" value=" ">';
+            if($mostrar['activo']){
+               echo '<input type="submit" class="userForm userInactivo" title="Bloquear" alt="Bloquear" name="bloquear" value=" ">';
+            }else {
+               echo '<input type="submit" class="userForm userActivo" title="Desbloquear" alt="Bloquear" name="desbloquear" value=" ">';
+            }
+
+       } ?>
        <input type="submit" id="reservar" name="reservar" value=<?php
           if(!$mostrar['disponible']){
            echo "Reservar";
           }else {
            echo "Devolver";
           }
-          ?>
-       <a href="#top"><img src="img/top.png" alt="Subir" title="Subir"/></a>
+          ?>>
+       <a href="#top"><img src="img/top.png" alt="Subir" title="Subir"></a>
       </div>
    </div><br/>
  </form>

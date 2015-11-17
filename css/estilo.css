@@ -113,7 +113,7 @@ a{
 	main{
 		margin: 0 auto;
 		width: 100%;
-		height: 500px;
+		height: 800px;
 	}
 
 	#centro{
@@ -286,7 +286,7 @@ a{
 
 	#reservar{
 		width: 80px;
-		height: 50px;
+		height: 36px;
 		border: 0;
 		background-color: #002147;
 		color: white;
@@ -325,4 +325,25 @@ a{
 		width: 20px;
 		height: 20px;
 
+	}
+/* BOTONES PARA GESTIÓN DE USUARIOS */
+	.userForm{
+		width: 36px;
+		height: 36px;
+		background-color: white;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	.userForm:hover{
+		border-color: #002147;
+	}
+	.userModificar{
+		background-image: url(../img/pencil.png);
+	}
+	.userInactivo{
+		background-image: url(../img/ver_no.png);
+	}
+	.userActivo{
+		background-image: url(../img/ver_si.png);
 	}

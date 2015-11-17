@@ -5,7 +5,7 @@ tbl_usuario: activo, email, id_tipo_user, id_usuario, password
  <form id="formMaterial" action="php/reservar.php" method="get">
    <div id="formQuery">
       <div id="formQueryFoto">
-       <p><img class ="fotoMini" src="img/material/<?php echo $mostrar['id_usuario']; ?>.jpg" alt="" title"" /></p>
+       <!--<p><img class ="fotoMini" src="img/material/<?php //echo $mostrar['id_usuario']; ?>.jpg" alt="" title"" /></p>-->
       </div>
       <div id="formQueryTexto">
        <p id="formTituloMaterial"><?php echo utf8_encode($mostrar['email']); ?><p>
@@ -14,14 +14,19 @@ tbl_usuario: activo, email, id_tipo_user, id_usuario, password
            echo "<img src='img/ok.png' alt='Ok' title='Ok' />";
           }else {
            echo "<img src='img/ko.png' alt='Ko' title='Ko' />";
-          }
-       ?><p>
+          }?><p>
        <p>Tipo de usuario: <?php echo utf8_encode($mostrar['tipo_user']); ?><p>
           <!-- campo oculto para enviar el id_material -->
-       <input type="hidden" name="disponibilidad" value="<?php //echo $mostrar['disponible']; ?>">
-       <input type="hidden" name="material" value="<?php //echo $mostrar['id_material']; ?>">
-       <!-- Se comprueba el valor de disponible y se asigna un texto al botón -->
-       <input type="submit" id="reservar" name="reservar" value="<?php?>">
+       <input type="hidden" name="disponibilidad" value="">
+       <input type="submit" class="userForm userModificar" alt="Modificar" title="Modificar" name="modificar" value="">
+       <?php
+         if($mostrar['activo']){
+            echo '<input type="submit" class="userForm userInactivo" title="Bloquear" alt="Bloquear" name="bloquear" value="">';
+         }else {
+            echo '<input type="submit" class="userForm userActivo" title="Desbloquear" alt="Desbloquear" name="desbloquear" value="">';
+         }
+        ?>
+
        <a href="#top"><img src="img/top.png" alt="Subir" title="Subir"></a>
       </div>
    </div><br/>

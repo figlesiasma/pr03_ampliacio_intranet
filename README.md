@@ -9,14 +9,20 @@ Usuari Admin:
   user: admin@fje.edu
   pass: admin
 
+18/11/2015
+----------
+
+
 
 17/11/2015
 ----------
 Canvis:
+* Inserció de botnos de modificar i mostrar
 * Modificació per mostrar Usuaris en Main.PHP
 * Usuaris poden veure recursos pero no poden veure altres usuaris, sol a Reservas
 * Admin pot veure recursos i usuaris pero no a Root
 * Root pot veure tot
+* Afegit efecte Metro JQUERY en funciones.js i funció en header.html
 
 
 16/11/2015
@@ -62,11 +68,11 @@ MP8 - Desplegament d'aplicacions web - Recomanaci�:	3h
 
 *****************************************************************************************************************************
 
-# pr02_intranet
+# pr03_ampliacio_intranet
 
-GitHub: https://github.com/figlesiasma/pr02_intranet
+GitHub: https://github.com/figlesiasma/pr03_ampliacio_intranet.git
 
-Proyecto02: INTRANET http://oxfordintranet.3eeweb.com/
+Proyecto03: INTRANET http://oxfordintranet.3eeweb.com/
 
 USUARIOS		PASSWORD
 
