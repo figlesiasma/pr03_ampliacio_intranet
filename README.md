@@ -1,27 +1,64 @@
 # pr03_ampliacio_internet 16/11/2015
+GitHub: https://github.com/figlesiasma/pr03_ampliacio_intranet.git
 
-Com a solució de les limitacions del projecte anterior s'han d'afegir les opcions que permeten reservar un recurs en un dia i una hora per a una franja horaria (hores senceres). L'aplicació haurà de permetre diversos tipus d'usuari (usuari i administrador), així com tota la gestió dels usuaris només un usuari administrador podrà fer (Alta/Baixa/Canvi usuaris).
+Usuari Root:
+  user: root@fje.edu
+  pass: root
+
+Usuari Admin:
+  user: admin@fje.edu
+  pass: admin
+
+
+17/11/2015
+----------
+Canvis:
+* ModificaciÃ³ per mostrar Usuaris en Main.PHP
+* Usuaris poden veure recursos pero no poden veure altres usuaris, sol a Reservas
+* Admin pot veure recursos i usuaris pero no a Root
+* Root pot veure tot
+
+
+16/11/2015
+----------
+Canvis:
+* ModificaciÃ³ de les opcions Admin on mostra Usuaris en el Select
+* ModificaciÃ³ en la sessiÃ³ de VALIDAR_USUARIO.PHP
+* Afegit la taula tbl_tipus_usuari que tindrï¿½ el tipus: user, admin, root
+* Insertat el camp Activo a tbl_usuaris i tbl_material
+* Afegit el camp activo i id_tipus_user en la taula tbl_usuaris per distingir el tipus d'usuari i si estï¿½ actiu.
+* DistribuciÃ³ el codi en includes php.
+
+Feines:
+-------
+Com a soluciï¿½ de les limitacions del projecte anterior s'han d'afegir les opcions que permeten
+reservar un recurs en un dia i una hora per a una franja horaria (hores senceres).
+L'aplicaciï¿½ haurï¿½ de permetre diversos tipus d'usuari (usuari i administrador),
+aixï¿½ com tota la gestiï¿½ dels usuaris nomï¿½s un usuari administrador podrï¿½ fer (Alta/Baixa/Canvi usuaris).
 EXTRA:
-- Part administració (només ho podrà fer un usuari administrador):
+- Part administraciï¿½ (nomï¿½s ho podrï¿½ fer un usuari administrador):
   - Alta/Baixa/Canvi recursos.
   - Alta/Baixa/Canvi reserves.								
-							
-MP9 - Disseny d'interfícies web - Recomanació:	3h
+
+MP9 - Disseny d'interfï¿½cies web - Recomanaciï¿½:	3h
 Desenvolupament de l'aspecte visual (nous elements del lloc web).
 
-MP6 - Desenvolupament web en entorn client - Recomanació:	6h
-Adaptació dels formularis i creació de nous. Generar les plantilles utilitzant jQuery UI/Bootstrap. Nous formularis, nous elements de formulari.								
-							
-MP7 - Desenvolupament web en entorn servidor - Recomanació:	5h
-Connexió amb la BD, execució de les consultes de selecció i mostrar les dades, execució de les consultes de modificació per a reservar un recurs en una data i una franja horaria. Manteniment d'usuaris: Creació - Modificació - Eliminació								
-								
-MP2 - Bases de dades II - Recomanació:	2h
-Ampliació de la Base de Dades del projecte 02.
-Qry's de selecció amb filtre.
-Qry's d'actualització, inserció i eliminació de dades.								
-							
-MP8 - Desplegament d'aplicacions web - Recomanació:	3h
-- Possibilitat d'aprofitar el font d'un altre projecte (github) - autogestió del codi font								
+MP6 - Desenvolupament web en entorn client - Recomanaciï¿½:	6h
+Adaptaciï¿½ dels formularis i creaciï¿½ de nous.
+Nous formularis, nous elements de formulari.								
+
+MP7 - Desenvolupament web en entorn servidor - Recomanaciï¿½:	5h
+Connexiï¿½ amb la BD, execuciï¿½ de les consultes de selecciï¿½ i mostrar les dades,
+execuciï¿½ de les consultes de modificaciï¿½ per a reservar un recurs en una data i una franja horaria.
+Manteniment d'usuaris: Creaciï¿½ - Modificaciï¿½ - Eliminaciï¿½								
+
+MP2 - Bases de dades II - Recomanaciï¿½:	2h
+Ampliaciï¿½ de la Base de Dades del projecte 02.
+Qry's de selecciï¿½ amb filtre.
+Qry's d'actualitzaciï¿½, inserciï¿½ i eliminaciï¿½ de dades.								
+
+MP8 - Desplegament d'aplicacions web - Recomanaciï¿½:	3h
+- Possibilitat d'aprofitar el font d'un altre projecte (github) - autogestiï¿½ del codi font								
 
 *****************************************************************************************************************************
 
@@ -45,6 +82,4 @@ USUARIOS		PASSWORD
 1111.joan23@fje.edu	1234
 
 
-FELIPE, XAVI, GERMÁN
-
-
+FELIPE, XAVI, GERMï¿½N

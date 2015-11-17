@@ -1,6 +1,4 @@
 <?php
-//conexión con la base de datos
-$conexion = mysqli_connect('localhost','root','','bd_pr02_intranet') or die ('No se ha podido conectar'. mysql_error());
 
 //se comprueba la variable devuelta de validar_usuario.php en caso de login incorrecto
 if(isset($_REQUEST['error'])){
@@ -13,27 +11,7 @@ if(isset($_REQUEST['error'])){
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Oxford Intranet</title>
-      <meta lang="es">
-      <meta charset="utf-8">
-      <meta name="author" content="Felipe, Xavi, Germán">
-      <meta name="description" content="Proyecto2_intranet">
-      <link rel="icon" type="image/png" href="img/icon.png">
-      <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
-      <script type="text/javascript">
-        function validar(){
-          if(getElementById('user').value==" "){
-            document.getElementById('user').style.borderColor = "red";
-          }else{
-            document.getElementById('user').style.borderColor = "green";
-          }
-          if(getElementById('pass').value==" "){
-            document.getElementById('pass').style.borderColor = "red";
-          }else{
-            document.getElementById('user').style.borderColor = "green";
-          }
-        }
-      </script>
+      <?php include 'template/header.html';  ?>
   </head>
     <body>
       <div id="barraNegra">
@@ -70,9 +48,9 @@ if(isset($_REQUEST['error'])){
                 <!-- FORMULARIO DE LOGIN -->
                 <form id="formLogin" name="formLogin" action="php/validar_usuario.php" method="post">
                   <p>Usuario:</p>
-                  <input id="user" class="user" type="email" name="user" size="30" value="" onblur="validar()" autofocus required autocomplete="off">
+                  <input id="user" class="user" type="email" name="email" size="30" value="" autofocus required autocomplete="off">
                   <p>Contraseña:</p>
-                  <input id="pass" class="pass" type="password" name="pass" size="30" maxlength="10" onblur="validar()" value="" required  autocomplete="off">
+                  <input id="pass" class="pass" type="password" name="password" size="30" maxlength="10" value="" required  autocomplete="off">
                   <input type="submit" class="submit" name="entrar" value=" Entrar ">
                   <input type="reset" class="reset" name="borrar" value=" Borrar ">
                 </form>

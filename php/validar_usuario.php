@@ -1,28 +1,26 @@
 <?php
-//se inicia una sesión
+//se continúa la sesión
 session_start();
-
-//se conecta con la base de datos
-$conexion = mysqli_connect('localhost','root','','bd_pr02_intranet') or die ('No se ha podido conectar'. mysql_error());
-
-  //se crean las sesiones para las variables de usuario y password cogidas del formulario
-  $_SESSION['sUser']= $_REQUEST['user'];
-  $_SESSION['sPass'] = $_REQUEST['pass'];
+//conexión bd
+include 'conexion.php';
 
   //sentencia SQL donde se compara las variables de sesión anteriores con los datos de la base de datos
-  $sql = "SELECT * FROM tbl_usuario WHERE email='$_SESSION[sUser]' AND password='$_SESSION[sPass]'";
+  //tbl_usuario: activo,email,id_tipo_user,id_usuario,password
+  $sql = "SELECT * FROM tbl_usuario WHERE email = '$_REQUEST[email]' AND password = '$_REQUEST[password]'";
 
   // se realiza la consulta anterior
   $query = mysqli_query($conexion,$sql);
 
   //se comprueba la consulta anterior y si es 1, es que hay una coincidencia
-    if(mysqli_num_rows($query)==1){
-
-      // se redirige a la página main.php en caso de login correcto
-      header('location: ../main.php');
-    }else{
+    if($dato = mysqli_fetch_array($query)){
+        //guardamos datos en sessions
+        $_SESSION['sUser']=$dato['email'];
+        $_SESSION['sId']=$dato['id_tipo_user'];
+        header('location: ../main.php');
+     }else{
       //se redirige a la pantalla login incluyendo un mensaje de error
-      header('location: ../index.php?error=No existe el usuario');
+       header('location: ../index.php?error=No existe el usuario');
     }
+
 
 ?>

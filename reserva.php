@@ -1,18 +1,11 @@
 <?php
 //se continúa la sesión
 session_start();
+//conexión bd
+include 'php/conexion.php';
+//consultar session
+include 'php/session.php';
 
-//si no está instanciada la sesión
-if(!isset($_SESSION['sUser'])){
-  //comprueba si está vacia la sesión
-  if(empty($_SESSION['sUser'])){
-    //en caso afirmativo, redirige a index para login
-    header('location: index.php');
-  }
-}
-
-//conexión a la base de datos o mensaje en caso de error
-$conexion = mysqli_connect('localhost','root','','bd_pr02_intranet') or die ('No se ha podido conectar'. mysql_error());
 
 //Sentencia para mostrar todos los materiales de la tabla tbl_material
 $sql = "SELECT DISTINCT tbl_reservas.id_reserva, tbl_reservas.id_material, tbl_usuario.email, tbl_reservas.hora_entrada, tbl_reservas.hora_salida, tbl_reservas.id_material, tbl_material.descripcion, tbl_material.disponible
@@ -43,27 +36,11 @@ $sql .= " ORDER BY tbl_reservas.hora_entrada DESC";
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Oxford Intranet</title>
-      <meta lang="es">
-      <meta charset="utf-8">
-      <meta name="author" content="Felipe, Xavi, Germán">
-      <meta name="description" content="Proyecto2_intranet">
-      <link rel="icon" type="image/png" href="img/icon.png">
-      <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
-      <script type="text/javascript" src="js/funcion.js"></script>
+      <?php include 'template/header.html';  ?>
   </head>
-    <body>
-
-<a name="top">
+<body><a name="top">
         <!--BARRA NEGRA SUPERIOR -->
-      <div id="barraNegra">
-        <div id="barraLogin">
-          <ul id="listaLogin">
-            <li id="identificate">Hola <?php echo $_SESSION['sUser']?> </li>
-            <li><a href="php/salir.php"><img src="img/exit.png" alt="Salir" title="Salir" /></a></li>
-          </ul>
-        </div>
-      </div>
+      <?php include 'php\session.cabecera.php' ?>
 
         <!--BARRA DE MENÚ -->
       <header>
