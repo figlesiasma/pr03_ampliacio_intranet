@@ -284,7 +284,7 @@ a{
 		font-weight: bold;
 	}
 
-	#reservar{
+	.reservar{
 		width: 80px;
 		height: 36px;
 		border: 0;
@@ -292,7 +292,7 @@ a{
 		color: white;
 	}
 
-	#reservar:hover{
+	.reservar:hover{
 		background-color: #5f86b2;
 		color: white;
 		cursor: pointer;
@@ -347,3 +347,70 @@ a{
 	.userActivo{
 		background-image: url(../img/ver_si.png);
 	}
+
+	#divInsert{
+		margin: 0 auto;
+		width: 999px;
+	}
+
+	#formInsert{
+		background-color: white;
+		width: 250px;
+		height: 250px;
+		margin: 0 auto;
+		border: 1px solid white;
+		border-radius: 5px;
+		display: none;
+	}
+
+	#formModificar{
+		background-color: white;
+		width: 250px;
+		height: 250px;
+		margin: 0 auto;
+		border: 1px solid white;
+		border-radius: 5px;
+	}
+
+	#formQueryInsert{
+		padding: 10px;
+		width: 90%;
+		height: 200px;
+}
+
+#formQueryTextoInsert{
+	float: left;
+	width: 90%
+}
+
+#formQueryTextoInsert p{
+	color: #002147;
+}
+
+#formTituloInsertar{
+	color: #002147;
+}
+
+#imgInsertarUser{
+	margin: 0 auto;
+	width: 250px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+#tituloUserIn{
+	width: 20px;
+	color: #002147;
+}
+
+#botonesAdmin{
+	margin: 0 auto;
+	background-color: white;
+	width: 245px;
+	color: white;
+}
+
+#tablaModificacion{
+	width: 250px;
+	height: 200px;
+}

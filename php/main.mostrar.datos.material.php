@@ -35,7 +35,7 @@
             }
 
        } ?>
-       <input type="submit" id="reservar" name="reservar" value=<?php
+       <input type="submit" class="reservar" name="reservar" value=<?php
           if(!$mostrar['disponible']){
            echo "Reservar";
           }else {

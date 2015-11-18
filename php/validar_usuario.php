@@ -6,7 +6,8 @@ include 'conexion.php';
 
   //sentencia SQL donde se compara las variables de sesión anteriores con los datos de la base de datos
   //tbl_usuario: activo,email,id_tipo_user,id_usuario,password
-  $sql = "SELECT * FROM tbl_usuario WHERE email = '$_REQUEST[email]' AND password = '$_REQUEST[password]'";
+  //El usuario debe estar activo para poder logear
+  $sql = "SELECT * FROM tbl_usuario WHERE email = '$_REQUEST[email]' AND password = '$_REQUEST[password]' AND activo = 1";
 
   // se realiza la consulta anterior
   $query = mysqli_query($conexion,$sql);

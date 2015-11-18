@@ -12,19 +12,19 @@ if(isset($_REQUEST['opciones'])){
             //se añadirá a la consulta según: 0 - Aulas, 1 - Material informático
            $sql .= " WHERE tbl_material.id_tipo_material = ".$_REQUEST['opciones'];
            //si el usuario es USER
-           if ($_SESSION['sId']==0) {
+          if ($_SESSION['sId']==0) {
              //no podrá ver los recursos desactivados
-             $sql .= " AND tbl_material.activo = false";
-           }
+             $sql .= " AND tbl_material.activo = 1";
+          }
         }else{
            //Seleccionamos todos los usuarios
-           $sql = "SELECT tbl_usuario.email, tbl_usuario.activo, tbl_tipo_user.tipo_user, tbl_usuario.id_tipo_user
+           $sql = "SELECT tbl_usuario.email, tbl_usuario.id_usuario, tbl_usuario.activo, tbl_tipo_user.tipo_user, tbl_usuario.id_tipo_user
                   FROM tbl_usuario
                   INNER JOIN tbl_tipo_user on tbl_tipo_user.id_tipo_user = tbl_usuario.id_tipo_user";
            if ($_SESSION['sId']==1) {
              $sql .= " WHERE tbl_tipo_user.id_tipo_user !=2";
            }
-           $sql .= " ORDER BY tbl_tipo_user.id_tipo_user DESC";
+           $sql .= " ORDER BY tbl_usuario.id_usuario DESC";
         }
       }
   }else {

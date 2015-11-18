@@ -21,3 +21,21 @@ function maximizar(){
   window.moveTo(0,0);
   window.resizeTo(screen.width,screen.height);
 }
+
+function mostrarInsertar() {
+  form = document.getElementById('formInsert').style;
+  if (form.display == "none") {
+    form.display = "block";
+  }else {
+    form.display = "none";
+  }
+}
+
+function mostrarModificar() {
+  form = document.getElementById('formModificar').style;
+  if (form.display == "none") {
+    form.display = "block";
+  }else {
+    form.display = "none";
+  }
+}

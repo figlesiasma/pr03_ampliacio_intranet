@@ -50,24 +50,7 @@ include 'php/main.filtrar.opciones.php';
       </div>
         <main>
         	<section id="centro">
-            <!-- PARTE DONDE SE VA A MOSTRAR LA INFORMACIÓN -->
-            <?php
-            //consulta de datos según el filtrado
-              $datos = mysqli_query($conexion,$sql);
-              //si se devuelve un valor diferente a 0 (hay datos)
-              include 'php/main.form.insert.php';
-              if(mysqli_num_rows($datos)!=0){
-                while ($mostrar = mysqli_fetch_array($datos)) {
-                  if($_REQUEST['opciones']!=3){
-                     include 'php/main.mostrar.datos.material.php';
-                  }else {
-                     include 'php/main.mostrar.datos.usuarios.php';
-                  }
-                }//fin while $mostrar
-              }else {
-                include 'php/nohaydatos.php';
-              }
-            ?>
+            <?php include 'php/main.form.modificar.usuario.php'; ?>
         	</section>
         </main>
     </body>

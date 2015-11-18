@@ -1,6 +1,8 @@
 # pr03_ampliacio_internet 16/11/2015
 GitHub: https://github.com/figlesiasma/pr03_ampliacio_intranet.git
 
+Server remoto: http://pr03_ampliacion.comlu.com/
+
 Usuari Root:
   user: root@fje.edu
   pass: root
@@ -11,13 +13,17 @@ Usuari Admin:
 
 18/11/2015
 ----------
-
+* Admin i Root poden insertar nous usuaris
+* Formulari de inserció d'usuaris
+* Formulari de actualització d'usuaris
+* Sentències sql
+* Registre en 000webhost.com (http://pr03_ampliacion.comlu.com/)
 
 
 17/11/2015
 ----------
 Canvis:
-* Inserció de botnos de modificar i mostrar
+* Inserció de botons de modificar i mostrar
 * Modificació per mostrar Usuaris en Main.PHP
 * Usuaris poden veure recursos pero no poden veure altres usuaris, sol a Reservas
 * Admin pot veure recursos i usuaris pero no a Root
