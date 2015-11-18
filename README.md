@@ -15,7 +15,7 @@ Usuari Admin:
 ----------
 * Admin i Root poden insertar nous usuaris
 * Formulari de inserció d'usuaris
-* Formulari de actualització d'usuaris
+* Formulari de modificació d'usuaris
 * Sentències sql
 * Registre en 000webhost.com (http://pr03_ampliacion.comlu.com/)
 

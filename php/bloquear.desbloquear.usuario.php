@@ -2,15 +2,14 @@
 //conexión a la bd
 include 'conexion.php';
 
-
 // tbl_usuario: activo, email, id_tipo_user, id_usuario, password
 
+//si el usuario está activo, envía el contrario para desactivar
+
 $sql = "UPDATE tbl_usuario
-       SET email = '$_REQUEST[email]',
-       password = '$_REQUEST[password]',
-       id_tipo_user = $_REQUEST[tipoUsuario],
-       activo = '$_REQUEST[activo]'
-       WHERE tbl_usuario.id_usuario = ".$_REQUEST['userMod'];
+        SET tbl_usuario.activo = ".$_REQUEST['activo']." WHERE tbl_usuario.id_usuario = ".$_REQUEST['idUsuario'];
+
+echo $sql;
 
 mysqli_query($conexion,$sql) or die ('No se ha realizado la consulta');
 
