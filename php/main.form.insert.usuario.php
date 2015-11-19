@@ -1,7 +1,8 @@
 <!--
 tbl_usuario: activo, email, id_tipo_user, id_usuario, password
-
 tbl_tipo_user: id_tipo_user, tipo_user
+
+FORMULARIO de inserción de usuarios incluida en el main.php
 -->
 <div id="divInsert"><br/>
    <div id="imgInsertarUser">
@@ -27,6 +28,7 @@ tbl_tipo_user: id_tipo_user, tipo_user
              <option value="0">Usuario</option>
              <option value="1">Administrador</option>
              <?php
+             //si es root, que muestre también la opción root
                if ($_SESSION['sId']==2) {
                   echo "<option value='2'>Root</option>";
                }

@@ -191,11 +191,12 @@ a{
 
 		#error{
 			margin: 0 auto;
-			width: 385px;
+			width: 999px;
 			height: auto;
 		}
 
 		#error p{
+			text-align: center;
 			margin-top: 15px;
 			color: white;
 			font-size: 20px;

@@ -7,18 +7,20 @@ VIENE DE MODIFICACION.PHP
 -->
 <?php
 include 'conexion.php';
-
+//consulta de selección
 $sqlModificar = "SELECT tbl_usuario.email, tbl_usuario.password, tbl_usuario.activo, tbl_tipo_user.tipo_user, tbl_usuario.id_tipo_user, tbl_usuario.id_usuario
                   FROM tbl_usuario
                   INNER JOIN tbl_tipo_user on tbl_tipo_user.id_tipo_user = tbl_usuario.id_tipo_user
-                  WHERE tbl_usuario.id_usuario = ".$_REQUEST['idUsuario'];
+                  WHERE tbl_usuario.id_usuario = ".$_REQUEST['idUsuario']." LIMIT 1";
 
+//se lanza la consulta
 $queryModificar = mysqli_query($conexion,$sqlModificar);
 
  ?>
 <div id="divModificar"><br/>
    <form id="formModificar" action="php/modificar.usuario.php" method="get">
       <?php
+      //si hay coincidencia, se guarda la información en la variable
       if ($datosModificar = mysqli_fetch_array($queryModificar)) {
       ?>
       <table id="tablaModificacion">
@@ -34,6 +36,7 @@ $queryModificar = mysqli_query($conexion,$sqlModificar);
             <th>Activo:</th>
             <td>
                <?php
+               //se comprueba el estado de si está activo
                   if ($datosModificar['activo']) {
                      echo '
                      Si&nbsp;<input type="radio" name="activo" value="1" checked>&nbsp;

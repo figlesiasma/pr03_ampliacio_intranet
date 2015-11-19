@@ -11,6 +11,12 @@ include 'php/reserva.mensaje.php';
 //Filtración de opciones donde se comprueba la opción de admin para filtrar por usuarios
 include 'php/main.filtrar.opciones.php';
 
+if(isset($_REQUEST['error'])){
+  $fail = $_REQUEST['error'];
+}
+
+?>
+
 ?>
 <!--INICIO WEB -->
 <!DOCTYPE html>
@@ -55,7 +61,16 @@ include 'php/main.filtrar.opciones.php';
             //consulta de datos según el filtrado
               $datos = mysqli_query($conexion,$sql);
               //si se devuelve un valor diferente a 0 (hay datos)
-              include 'php/main.form.insert.php';
+              include 'php/main.form.insert.php';?>
+              <div id="error">
+                <p>
+                  <?php
+                    //si la variable $fail no está vacía, muestra el contenido
+                    if(!empty($fail)){
+                      echo $fail;
+                    }?>
+                </p>
+              </div><?php
               if(mysqli_num_rows($datos)!=0){
                 while ($mostrar = mysqli_fetch_array($datos)) {
                   if($_REQUEST['opciones']!=3){

@@ -1,3 +1,4 @@
+<!-- Formulario superior barra negra de filtrado de la pantalla main.php-->
 <form action="main.php" method="get">
  <span style="color:white;">Filtrar por:</span><select name="opciones" onchange="this.form.submit()">
     <option value="" disabled selected>-Elige una opción-</option>
@@ -15,6 +16,7 @@
           echo "<option value='$mostrarOpciones[id_tipo_material]'>$mostrarOpciones[tipo]</option>";
           $i++;
        }
+       //si el usuario es superior a USER, se añade un nuevo valor para gestionar usuarios
        if ($_SESSION['sId']>0){
           echo "<option value='$i'>Usuarios</option>";
        }

@@ -21,13 +21,17 @@ if(isset($_REQUEST['opciones'])){
            $sql = "SELECT tbl_usuario.email, tbl_usuario.id_usuario, tbl_usuario.activo, tbl_tipo_user.tipo_user, tbl_usuario.id_tipo_user
                   FROM tbl_usuario
                   INNER JOIN tbl_tipo_user on tbl_tipo_user.id_tipo_user = tbl_usuario.id_tipo_user";
+                  //si la sesión es de administrador
            if ($_SESSION['sId']==1) {
+             //que muestre todos los datos excepto Root
              $sql .= " WHERE tbl_tipo_user.id_tipo_user !=2";
            }
+           //se ordena por el último usuario
            $sql .= " ORDER BY tbl_usuario.id_usuario DESC";
         }
       }
   }else {
+     //en caso contrario, se asigna Tot
      $_REQUEST['opciones']=0;
   }
 ?>
