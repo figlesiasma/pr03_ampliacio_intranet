@@ -423,3 +423,17 @@ transition-duration:.3s;
 	width: 250px;
 	height: 200px;
 }
+
+#formReserva{
+	background-color: white;
+	width: 450px;
+	height: 300px;
+	margin: 0 auto;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+#tablaReserva{
+	width: 400px;
+	height: 250px;
+}

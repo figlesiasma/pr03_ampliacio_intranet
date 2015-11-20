@@ -11,21 +11,32 @@ Usuari Admin:
   user: admin@fje.edu
   pass: admin
 
+Usuari User:
+  user: user@fje.edu
+  pass: user
+
+19/11/2015
+----------
+* Configuració de conexió amb 000webhost
+* Importació sql a 000webhost
+* Exportació de phpAdmin
+* Formulario de tiempo
+
 18/11/2015
 ----------
+* Comprobació si existeix usuari al insertar
 * Admin i Root poden insertar nous usuaris
 * Formulari de inserció d'usuaris
 * Formulari de modificació d'usuaris
 * Sentències sql
 * Registre en 000webhost.com (http://pr03_ampliacion.comlu.com/)
 
-
 17/11/2015
 ----------
 Canvis:
 * Inserció de botons de modificar i mostrar
 * Modificació per mostrar Usuaris en Main.PHP
-* Usuaris poden veure recursos pero no poden veure altres usuaris, sol a Reservas
+* Usuaris poden veure recursos pero no poden veure altres usuaris, sol Reservas
 * Admin pot veure recursos i usuaris pero no a Root
 * Root pot veure tot
 * Afegit efecte Metro JQUERY en funciones.js i funció en header.html

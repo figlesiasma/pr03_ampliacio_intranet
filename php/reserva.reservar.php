@@ -2,9 +2,9 @@
 //se continúa la sesión
 session_start();
 //conexión bd
-include 'php/conexion.php';
+include 'conexion.php';
 //consultar session
-include 'php/session.php';
+include 'session.php';
 
 if ($_REQUEST['disponibilidad']==0){
   //consulta de inserción

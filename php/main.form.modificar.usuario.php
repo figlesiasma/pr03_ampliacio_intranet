@@ -82,7 +82,8 @@ $queryModificar = mysqli_query($conexion,$sqlModificar);
          </tr>
       </table>
     <input type="hidden" name="userMod" value="<?php echo $datosModificar['id_usuario']; ?>">
-    <input type="submit" class="reservar" alt="Insertar" title="Insertar" name="Insertar" value="Aceptar">
+    <input type="submit" class="reservar" alt="Insertar" title="Insertar" name="Insertar" value="Modificar">
+    <input type="submit" onclick="window.location: ../main.php?opcion=3" class="reservar" alt="Volver" title="Volver" name="Volver" value="Volver">
  <?php } ?>
    </form>
 </div>

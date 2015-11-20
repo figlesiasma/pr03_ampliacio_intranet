@@ -25,7 +25,7 @@ if (mysqli_num_rows($datos)>0) {
    mysqli_query($conexion,$sqlInsert) or die ('La consulta ha fallado: '. mysql_error());
 
    //se se redirige
-   header('Location: ../main.php?opciones=3');
+   header('Location: ../main.php?opciones=3+&error=El usuario se ha registrado correctamente');
 }
 
 

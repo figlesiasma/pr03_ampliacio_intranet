@@ -40,7 +40,7 @@ $sql .= " ORDER BY tbl_reservas.hora_entrada DESC";
   </head>
 <body><a name="top">
         <!--BARRA NEGRA SUPERIOR -->
-      <?php include 'php\session.cabecera.php' ?>
+      <?php include 'php/session.cabecera.php' ?>
 
         <!--BARRA DE MENÚ -->
       <header>

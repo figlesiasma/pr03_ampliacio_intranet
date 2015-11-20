@@ -1,5 +1,5 @@
 <div id="divMaterial"><br/>
- <form id="formMaterial" action="php/reservar.php" method="get">
+ <form id="formMaterial" action="reserva.material.php" method="get">
    <div id="formQuery">
       <div id="formQueryFoto">
        <p><img class ="fotoMini" src="img/material/<?php echo $mostrar['id_material']; ?>.jpg" alt="" title"" /></p>
@@ -29,11 +29,10 @@
        if ($_SESSION['sId']>0) {
                echo '<input type="submit" class="userForm userModificar" alt="Modificar" title="Modificar" name="modificar" value=" ">';
             if($mostrar['activo']){
-               echo '<input type="submit" class="userForm userInactivo" title="Bloquear" alt="Bloquear" name="bloquear" value=" ">';
+               echo '<input type="submit" class="userForm userInactivo" onclick="this.form.action=\'php/reserva.reservar.php\';" title="Bloquear" alt="Bloquear" name="bloquear" value=" ">';
             }else {
-               echo '<input type="submit" class="userForm userActivo" title="Desbloquear" alt="Bloquear" name="desbloquear" value=" ">';
+               echo '<input type="submit" class="userForm userActivo" onclick="this.form.action=\'php/reserva.reservar.php\';" title="Desbloquear" alt="Bloquear" name="desbloquear" value=" ">';
             }
-
        } ?>
        <input type="submit" class="reservar" name="reservar" value=<?php
           if(!$mostrar['disponible']){

@@ -16,8 +16,6 @@ if(isset($_REQUEST['error'])){
 }
 
 ?>
-
-?>
 <!--INICIO WEB -->
 <!DOCTYPE html>
 <html>
@@ -27,14 +25,8 @@ if(isset($_REQUEST['error'])){
     <body>
       <a name="top">
         <!--BARRA NEGRA SUPERIOR -->
-      <div id="barraNegra">
-        <div id="barraLogin">
-          <ul id="listaLogin">
-            <li id="identificate">Hola <?php echo $_SESSION['sUser']?> </li>
-            <li><a href="php/salir.php"><img src="img/exit.png" alt="Salir" title="Salir" /></a></li>
-          </ul>
-        </div>
-      </div>
+
+      <?php include 'php/session.cabecera.php';  ?>
 
         <!--BARRA DE MENÚ -->
       <header>
